@@ -122,7 +122,7 @@ class LeNet:
         return imgs
 
     def predict(self, img):
-        processed = self.color_process(img.item())
+        processed = self.color_process(img.eval())
         return self._model.predict(processed, batch_size=self.batch_size)
     
     def predict_one(self, img):
